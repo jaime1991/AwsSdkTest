@@ -1,0 +1,15 @@
+spring:
+  autoconfigure:
+    exclude:
+      - org.springframework.cloud.aws.autoconfigure.context.ContextInstanceDataAutoConfiguration
+      - org.springframework.cloud.aws.autoconfigure.context.ContextStackAutoConfiguration
+      - org.springframework.cloud.aws.autoconfigure.context.ContextRegionProviderAutoConfiguration
+server:
+  port: 9090
+aws:
+  config:
+    endpoint: ${endpoint}
+    region: ${region}
+    accesskey: ${accesskey}
+    secretkey: ${secretkey}
+    sqsQueue: ${queue}
